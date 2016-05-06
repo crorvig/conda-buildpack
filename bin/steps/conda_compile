@@ -1,5 +1,5 @@
 if [ ! -d /app/.heroku/miniconda ]; then
-    puts-step "Preparing Python/Miniconda Environment (3.5.2)"
+    puts-step "Preparing Python/Miniconda Environment"
     curl -Os https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
     bash Miniconda2-latest-Linux-x86_64.sh  -p /app/.heroku/miniconda/ -b | indent
     rm -fr Miniconda2-latest-Linux-x86_64.sh
@@ -19,4 +19,4 @@ if [ -f requirements.txt ]; then
 fi
 
 # Clean up the installation environment .
-conda clean -pt --yes > /dev/null
+conda clean -pt --yes 
